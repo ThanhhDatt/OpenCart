@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Collection;
 
 @Service
@@ -51,14 +52,14 @@ public class OpenCartServiceImpl implements OpenCartService{
 
     @Override
     @Transactional
-    public Collection<Product> addProductToCart(Product product) {
-        return cartRepository.addProduct(product);
+    public Collection<Product> addProductToCart(Integer productID, Integer customerID) {
+        return cartRepository.addProduct(productID, customerID);
     }
 
     @Override
     @Transactional
-    public Collection<Product> addProductToWishList(Product product) {
-        return wishListRepository.addProduct(product);
+    public Collection<Product> addProductToWishList(Integer productId, Integer customerID) {
+        return wishListRepository.addProduct(productId, customerID);
     }
 
     @Override
@@ -81,19 +82,8 @@ public class OpenCartServiceImpl implements OpenCartService{
 
     @Override
     @Transactional(readOnly = true)
-    public Cart findCartByID(Integer ID) {
+    public String findCartByID(Integer ID) {
         return cartRepository.findCartByID(ID);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public WishList findWishListByCustomerID(Integer ID) {
-        return wishListRepository.findWishListByID(ID);
-    }
-
-    @Override
-    public Collection<WishList> finsWishListByCustomerName(String name) {
-        return wishListRepository.findWishListByName(name);
     }
 
     @Override

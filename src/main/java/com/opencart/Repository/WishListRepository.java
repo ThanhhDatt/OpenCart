@@ -7,10 +7,8 @@ import java.util.Collection;
 
 public interface WishListRepository {
     Collection<Product> findAllProductInWishList();
-    Collection<Product> addToCart(Product product);
+    Collection<Product> addToCart(Integer productId, Integer customerID);
     Collection<Product> removeProductInWishList (Product product);
     void save(WishList wishList);
-    WishList findWishListByID(Integer ID);
-    Collection<Product> addProduct(Product product);
-    Collection<WishList> findWishListByName(String name);
+    Collection<Product> addProduct(Integer productID, Integer customerID);
 }

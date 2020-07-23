@@ -8,8 +8,8 @@ import java.util.Collection;
 public interface CartRepository {
     Collection<Product> findAllProduct();
     Collection<Product> removeProductInCart (Product product);
-    Collection<Product> addProduct(Product product);
-    Cart findCartByID(Integer ID);
+    Collection<Product> addProduct(Integer productID, Integer customerID);
+    String findCartByID(Integer ID);
     Collection<Cart> findCartByName (String name);
     Collection<Product> addToWishList(Product product);
     void save (Cart cart);
