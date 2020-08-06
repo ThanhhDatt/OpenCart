@@ -1,4 +1,4 @@
-package opencart.Parser.Model;
+package opencart.ZParser.Model;
 
 import java.util.HashSet;
 import java.util.Set;

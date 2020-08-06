@@ -1,12 +1,11 @@
-package opencart.Parser.Model;
+package opencart.ZParser.Model;
 
 import java.util.List;
 
-public class Method extends NamedEntity {
+public class Constructor extends NamedEntity {
     private List<String> parameters;
 
-    public Method(String type, String name, List<String> status, List<String> parameters) {
-        super.setType(type);
+    public Constructor(String name, List<String> parameters, List<String> status) {
         super.setName(name);
         super.setModifiers(status);
         this.parameters = parameters;
@@ -19,9 +18,4 @@ public class Method extends NamedEntity {
     public void setParameters(List<String> parameters) {
         this.parameters = parameters;
     }
-
-    public void addParameters(String parameter) {
-        parameters.add(parameter);
-    }
-
 }

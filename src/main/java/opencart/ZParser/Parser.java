@@ -1,7 +1,7 @@
-package opencart.Parser;
+package opencart.ZParser;
 
-import opencart.Parser.Model.ClassProperties;
-import opencart.Parser.ReadFile.ReadFile;
+import opencart.ZParser.Model.ClassProperties;
+import opencart.ZParser.ReadFile.ReadFile;
 
 import java.io.IOException;
 import java.util.Scanner;

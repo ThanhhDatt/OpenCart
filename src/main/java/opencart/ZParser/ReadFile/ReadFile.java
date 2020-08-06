@@ -1,7 +1,7 @@
-package opencart.Parser.ReadFile;
+package opencart.ZParser.ReadFile;
 
 import com.google.common.io.Files;
-import opencart.Parser.Model.*;
+import opencart.ZParser.Model.*;
 import org.eclipse.jdt.core.dom.*;
 
 import java.io.*;
